@@ -5,7 +5,7 @@
 Include the library file at the top of your diagram
 
 ```
-!include https://raw.githubusercontent.com/karlerasmus/archi-plantuml-utils/legend.iuml
+!include https://raw.githubusercontent.com/karlerasmus/archi-plantuml-utils/master/legend.iuml
 ```
 
 ## Basic Usage
