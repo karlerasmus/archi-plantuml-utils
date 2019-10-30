@@ -1,0 +1,114 @@
+skinparam LegendBackgroundColor #white
+skinparam LegendBorderThickness 1
+
+!function archiLegend($layers="BATSM")
+
+!local $not_found = %intval("-1")
+!local $bus = %strpos($layers, "B")
+!local $app = %strpos($layers, "A")
+!local $tech = %strpos($layers, "T")
+!local $strat = %strpos($layers, "S")
+!local $motiv = %strpos($layers, "M")
+
+legend
+Archimate symbols
+Specification:[[https://pubs.opengroup.org/architecture/archimate3-doc/]]
+
+|Notation |= Name |= Description |
+!if ($bus != $not_found)
+<#BUSINESS>| |<b>Business Layer</b>| |
+<#EEEEEE>| |<i>Active Structure| |
+| <$archimate/business-actor>| Actor | A business entity that is capable of performing behavior. |
+| <$archimate/business-role>| Role | The responsibility for performing specific behavior, to which an actor can be \n assigned, or the part an actor plays in a particular action or event. |
+| <$archimate/business-collaboration> | Collaboration | An aggregate of two or more business internal active structure \n elements that work together to perform collective behavior. |
+| <$archimate/business-interface> | Interface | A point of access where a business service is made available to the environment. |
+<#EEEEEE>| |<i>Behaviour| |
+| <$archimate/business-process> | Process | A sequence of business behaviors that achieves a specific outcome such as \n a defined set of products or business services. |
+| <$archimate/business-function> | Function | A collection of business behavior based on a chosen set of criteria \n (typically required business resources and/or competencies), closely aligned to an \n organization, but not necessarily explicitly governed by the organization. |
+| <$archimate/business-interaction> | Interaction | A unit of collective business behavior performed by (a collaboration of) two or \n more business roles. |
+| <$archimate/business-event> | Event | A business behavior element that denotes an organizational state change. It \n may originate from and be resolved inside or outside the organization. |
+| <$archimate/business-service> | Service | An explicitly defined exposed business behavior. |
+<#EEEEEE>| |<i>Passive Structure| |
+| <$archimate/business-object> | Object | A concept used within a particular business domain. |
+| <$archimate/business-contract> | Contract | A formal or informal specification of an agreement between a provider and a consumer \n that specifies the rights and obligations associated with a product and establishes \n functional and non-functional parameters for interaction.|
+| <$archimate/business-representation> | Representation | A perceptible form of the information carried by a business object. |
+<#EEEEEE>| |<i>Composite| |
+| <$archimate/business-product> | Product | A coherent collection of services and/or passive structure elements, accompanied \n by a  contract/set of agreements, which is offered as a whole to (internal or external) \n customers. |
+!endif
+!if ($app != $not_found)
+<#APPLICATION>| |<b>Application Layer</b>| |
+<#EEEEEE>| |<i>Active Structure| |
+| <$archimate/application-component> | Component | An encapsulation of application functionality aligned to implementation structure, \n which is modular and replaceable. It encapsulates its behavior and data, exposes \n services, and makes them available through interfaces. |
+| <$archimate/application-collaboration> | Collaboration | An aggregate of two or more application components that work together to \n perform collective application behavior. |
+| <$archimate/application-interface> | Interface | A point of access where application services are made available to a user, another \n application component, or a node. |
+<#EEEEEE>| |<i>Behaviour| |
+| <$archimate/application-function> | Function | Automated behavior that can be performed by an application component. |
+| <$archimate/application-interaction> | Interaction | A unit of collective application behavior performed by (a collaboration of) \n two or more application components.  |
+| <$archimate/application-process> | Process | A sequence of application behaviors that achieves a specific outcome. |
+| <$archimate/application-event> | Event | An application behavior element that denotes a state change. |
+| <$archimate/application-service> | Service | An explicitly defined exposed application behavior. |
+<#EEEEEE>| |<i>Passive Structure| |
+| <$archimate/application-data-object> | Data Object | Data structured for automated processing. |
+!endif
+!if ($tech != $not_found)
+<#TECHNOLOGY>| |<b>Technology Layer</b>| |
+<#EEEEEE>| |<i>Active Structure| |
+| <$archimate/technology-node> | Node | A node represents a computational or physical resource that hosts, manipulates,\n or interacts with other computational or physical resources. |
+| <$archimate/technology-device> | Device | A device is a physical IT resource upon which system software and artifacts \n may be stored or deployed for execution. |
+| <$archimate/technology-system-software> | System software | System software represents software that provides or \n contributes to an environment for storing, executing, and using software or \n data deployed within it. |
+| <$archimate/technology-collaboration> | Collaboration | A technology collaboration represents an aggregate of two \n or more nodes that work together to perform collective technology behavior. |
+| <$archimate/technology-infra-interface> | Interface | A technology interface represents a point of access where \n technology services offered by a node can be accessed. |
+| <$archimate/technology-communication-path> | Path | A path represents a link between two or more nodes, through \n which these nodes can exchange data or material. |
+| <$archimate/technology-network> | Communication Network | A communication network represents a set of structures that connects computer \n systems or other electronic devices for transmission, routing, and reception of data \n or data-based communications such as voice and video. |
+<#EEEEEE>| |<i>Behaviour| |
+| <$archimate/technology-function> | Function | A technology function represents a collection of technology behavior that can be \n performed by a node. |
+| <$archimate/technology-process> | Process | A technology process represents a sequence of technology behaviors that achieves \n a specific outcome. |
+| <$archimate/technology-event> | Event | A technology event is a technology behavior element that denotes a state change. |
+| <$archimate/technology-infra-service> | Service | A technology service represents an explicitly defined exposed technology behavior. |
+<#EEEEEE>| |<i>Passive Structure| |
+| <$archimate/object> | Object | A technology object represents a passive element that is used or produced by \n technology behavior. |
+| <$archimate/technology-artifact> | Artifact | An artifact represents a piece of data that is used or produced in a software \n development process, or by deployment and operation of an IT system. |
+!endif
+!if ($strat != $not_found)
+<#STRATEGY>| |<b>Strategy Layer</b>| |
+<#EEEEEE>| |<i>Structure| |
+| <$archimate/strategy-resource> | Resource | A resource represents an asset owned or controlled by an individual or organization. |
+<#EEEEEE>| |<i>Behaviour| |
+| <$archimate/strategy-capability> | Capability | A capability represents an ability that an active structure element, such as an \n organization, person, or system, possesses. |
+| <$archimate/strategy-course-of-action> | Course of action | A course of action is an approach or plan for configuring some \n capabilities and resources of the enterprise, undertaken to achieve a goal.|
+!endif
+!if ($motiv != $not_found)
+<#MOTIVATION>| |<b>Motivation Layer</b>| |
+| <$archimate/motivation-stakeholder> | Stakeholder | A stakeholder is the role of an individual, team, or organization (or \n classes thereof) that represents their interests in the outcome of the architecture. |
+| <$archimate/motivation-driver> | Driver | A driver represents an external or internal condition that motivates an organization \n to define its goals and implement the changes necessary to achieve them. |
+| <$archimate/motivation-assessment> | Assessment | An assessment represents the result of an analysis of the state of affairs of the \n enterprise with respect to some driver. |
+| <$archimate/motivation-goal> | Goal | A high-level statement of intent, direction, or desired end state for an organization and \n  its stakeholders.  |
+| <$archimate/motivation-outcome> | Outcome | An end result that has been achieved. |
+| <$archimate/motivation-principle> | Principle | A qualitative statement of intent that should be met by the architecture. |
+| <$archimate/motivation-requirement> | Requirement | A statement of need that must be met by the architecture. |
+| <$archimate/motivation-constraint> | Constraint | A factor that prevents or obstructs the realization of goals. |
+| <$archimate/motivation-meaning> | Meaning | The knowledge or expertise present in, or the interpretation given to, a core element in a particular context. |
+| <$archimate/value> | Value | The relative worth, utility, or importance of a core element or an outcome. |
+!endif
+<#CCCCCC>| |<b>Relationships</b>| |
+<#EEEEEE>| |<i>Structural| |
+| <$archimate/composition> | Composition | Indicates that an element consists of one or more other concepts. |
+| <$archimate/aggregation> | Aggregation | Indicates that an element groups a number of other concepts. |
+| <$archimate/assignment> | Assignment | Expresses the allocation of responsibility, performance of behavior, or execution. |
+| <$archimate/realisation> | Realisation | Indicates that an entity plays a critical role in the creation, achievement, \n sustenance, or operation of a more abstract entity. |
+<#EEEEEE>| |<i>Dependency| |
+| <$archimate/used-by> | Serving | Models that an element provides its functionality to another element. |
+| <$archimate/access> | Access | Models the ability of behavior and active structure elements to observe or act \n upon passive structure elements.|
+| <$archimate/influence> | Influence | Models that an element affects the implementation or achievement of some \n motivation element. |
+<#EEEEEE>| |<i>Dynamic| |
+| <$archimate/triggering> | Triggering | Describes a temporal or causal relationship between elements. |
+| <$archimate/flow> | Flow | Transfer from one element to another. |
+<#EEEEEE>| |<i>Other| |
+| <$archimate/specialisation> | Specialisation | Indicates that an element is a particular kind of another element. |
+| <$archimate/association> | Association | Models an unspecified relationship, or one that is not represented by another \n ArchiMate relationship. |
+| <$archimate/junction-and> | And | Used to connect relationships of the same type. |
+| <$archimate/junction-or> | Or | Used to connect relationships of the same type. |
+
+end legend
+
+!endfunction
