@@ -1,7 +1,7 @@
 skinparam LegendBackgroundColor #white
 skinparam LegendBorderThickness 1
 
-!function archiLegend($layers="BATSM")
+!function archiLegend($layers="BATSM",$placement="bottom")
 
 !local $not_found = %intval("-1")
 !local $bus = %strpos($layers, "B")
@@ -10,7 +10,7 @@ skinparam LegendBorderThickness 1
 !local $strat = %strpos($layers, "S")
 !local $motiv = %strpos($layers, "M")
 
-legend
+legend $placement
 Archimate symbols
 Specification:[[https://pubs.opengroup.org/architecture/archimate3-doc/]]
 
@@ -87,7 +87,7 @@ Specification:[[https://pubs.opengroup.org/architecture/archimate3-doc/]]
 | <$archimate/motivation-principle> | Principle | A qualitative statement of intent that should be met by the architecture. |
 | <$archimate/motivation-requirement> | Requirement | A statement of need that must be met by the architecture. |
 | <$archimate/motivation-constraint> | Constraint | A factor that prevents or obstructs the realization of goals. |
-| <$archimate/motivation-meaning> | Meaning | The knowledge or expertise present in, or the interpretation given to, a core element in a particular context. |
+| <$archimate/motivation-meaning> | Meaning | The knowledge or expertise present in, or the interpretation given to, a core element \n in a particular context. |
 | <$archimate/value> | Value | The relative worth, utility, or importance of a core element or an outcome. |
 !endif
 <#CCCCCC>| |<b>Relationships</b>| |
