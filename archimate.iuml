@@ -21,9 +21,9 @@ skinparam maxMessageSize 150
 skinparam StereotypeAlignment right
 
 skinparam Arrow {
-    Color #000000
+    Color $BorderColor
     FontColor #000000
-    FontSize 12
+    FontSize 10
 }
 skinparam Folder<<grouping>> {
     Shadowing true
@@ -50,6 +50,7 @@ skinparam node {
 }
 skinparam cloud {
   StereotypeAlignment right
+  BorderColor $BorderColor
 }
 skinparam frame {
   StereotypeAlignment right
