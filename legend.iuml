@@ -1,3 +1,10 @@
+!$BusColor = "#BUSINESS"
+!$AppColor = "#APPLICATION"
+!$TechColor = "#TECHNOLOGY"
+!$ImplColor = "#IMPLEMENTATION"
+!$StratColor = "#STRATEGY"
+!$MotivColor = "#MOTIVATION"
+
 skinparam LegendBackgroundColor #white
 skinparam LegendBorderThickness 1
 
@@ -16,7 +23,7 @@ Specification:[[https://pubs.opengroup.org/architecture/archimate3-doc/]]
 
 |Notation |= Name |= Description |
 !if ($bus != $not_found)
-<#BUSINESS>| |<b>Business Layer</b>| |
+<$BusColor>| |<b>Business Layer</b>| |
 <#EEEEEE>| |<i>Active Structure| |
 | <$archimate/business-actor>| Actor | A business entity that is capable of performing behavior. |
 | <$archimate/business-role>| Role | The responsibility for performing specific behavior, to which an actor can be \n assigned, or the part an actor plays in a particular action or event. |
@@ -36,7 +43,7 @@ Specification:[[https://pubs.opengroup.org/architecture/archimate3-doc/]]
 | <$archimate/business-product> | Product | A coherent collection of services and/or passive structure elements, accompanied \n by a  contract/set of agreements, which is offered as a whole to (internal or external) \n customers. |
 !endif
 !if ($app != $not_found)
-<#APPLICATION>| |<b>Application Layer</b>| |
+<$AppColor>| |<b>Application Layer</b>| |
 <#EEEEEE>| |<i>Active Structure| |
 | <$archimate/application-component> | Component | An encapsulation of application functionality aligned to implementation structure, \n which is modular and replaceable. It encapsulates its behavior and data, exposes \n services, and makes them available through interfaces. |
 | <$archimate/application-collaboration> | Collaboration | An aggregate of two or more application components that work together to \n perform collective application behavior. |
@@ -51,7 +58,7 @@ Specification:[[https://pubs.opengroup.org/architecture/archimate3-doc/]]
 | <$archimate/application-data-object> | Data Object | Data structured for automated processing. |
 !endif
 !if ($tech != $not_found)
-<#TECHNOLOGY>| |<b>Technology Layer</b>| |
+<$TechColor>| |<b>Technology Layer</b>| |
 <#EEEEEE>| |<i>Active Structure| |
 | <$archimate/technology-node> | Node | A node represents a computational or physical resource that hosts, manipulates,\n or interacts with other computational or physical resources. |
 | <$archimate/technology-device> | Device | A device is a physical IT resource upon which system software and artifacts \n may be stored or deployed for execution. |
@@ -70,7 +77,7 @@ Specification:[[https://pubs.opengroup.org/architecture/archimate3-doc/]]
 | <$archimate/technology-artifact> | Artifact | An artifact represents a piece of data that is used or produced in a software \n development process, or by deployment and operation of an IT system. |
 !endif
 !if ($strat != $not_found)
-<#STRATEGY>| |<b>Strategy Layer</b>| |
+<$StratColor>| |<b>Strategy Layer</b>| |
 <#EEEEEE>| |<i>Structure| |
 | <$archimate/strategy-resource> | Resource | A resource represents an asset owned or controlled by an individual or organization. |
 <#EEEEEE>| |<i>Behaviour| |
@@ -78,7 +85,7 @@ Specification:[[https://pubs.opengroup.org/architecture/archimate3-doc/]]
 | <$archimate/strategy-course-of-action> | Course of action | A course of action is an approach or plan for configuring some \n capabilities and resources of the enterprise, undertaken to achieve a goal.|
 !endif
 !if ($motiv != $not_found)
-<#MOTIVATION>| |<b>Motivation Layer</b>| |
+<$MotivColor>| |<b>Motivation Layer</b>| |
 | <$archimate/motivation-stakeholder> | Stakeholder | A stakeholder is the role of an individual, team, or organization (or \n classes thereof) that represents their interests in the outcome of the architecture. |
 | <$archimate/motivation-driver> | Driver | A driver represents an external or internal condition that motivates an organization \n to define its goals and implement the changes necessary to achieve them. |
 | <$archimate/motivation-assessment> | Assessment | An assessment represents the result of an analysis of the state of affairs of the \n enterprise with respect to some driver. |
