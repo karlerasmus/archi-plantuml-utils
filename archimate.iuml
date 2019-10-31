@@ -146,8 +146,8 @@ skinparam RectangleRoundCorner<< <$archimate/application-function> >> 25
 !define Business_Representation(e_alias, e_label) archimate $BusColor "---\n e_label" <<business-representation>> as e_alias
 !define Business_Product(e_alias, e_label) frame $BusColor "e_label" <<$archimate/business-product>> as e_alias
 
-!define Business_Process_Grp(e_alias, e_label) rectangle e_label as e_alias << <$archimate/business-process> >> $BusColor
-!define Business_Function_Grp(e_alias, e_label) rectangle e_label as e_alias << <$archimate/business-function> >> $BusColor
+!define Business_Process_Grp(e_alias, e_label) rectangle "e_label" as e_alias << <$archimate/business-process> >> $BusColor
+!define Business_Function_Grp(e_alias, e_label) rectangle "e_label" as e_alias << <$archimate/business-function> >> $BusColor
 
 'Application Elements
 !define Application_Component(e_alias, e_label) archimate $AppColor "e_label" <<application-component>> as e_alias
@@ -160,9 +160,9 @@ skinparam RectangleRoundCorner<< <$archimate/application-function> >> 25
 !define Application_Service(e_alias, e_label) archimate $AppColor "e_label" <<application-service>> as e_alias
 !define Application_DataObject(e_alias, e_label) archimate $AppColor "---\n e_label" <<application-data-object>> as e_alias
 
-!define Application_Process_Grp(e_alias, e_label) rectangle e_label as e_alias << <$archimate/application-process> >> $AppColor
-!define Application_Function_Grp(e_alias, e_label) rectangle e_label as e_alias << <$archimate/application-function> >> $AppColor
-!define Application_Component_Grp(e_alias, e_label) component e_label as e_alias $AppColor
+!define Application_Process_Grp(e_alias, e_label) rectangle "e_label" as e_alias << <$archimate/application-process> >> $AppColor
+!define Application_Function_Grp(e_alias, e_label) rectangle "e_label" as e_alias << <$archimate/application-function> >> $AppColor
+!define Application_Component_Grp(e_alias, e_label) component "e_label" as e_alias $AppColor
 
 'Technology Elements
 !define Technology_Node(e_alias, e_label) archimate $TechColor "e_label" <<technology-node>> as e_alias
