@@ -15,6 +15,7 @@
 !$StratColor = "#STRATEGY"
 !$MotivColor = "#MOTIVATION"
 
+skinparam defaultFontName "Open Sans"
 skinparam defaultTextAlignment center
 skinparam wrapWidth 400
 skinparam maxMessageSize 150
