@@ -103,11 +103,11 @@ skinparam RectangleRoundCorner<< <$archimate/application-function> >> 25
 
 ' Layout
 ' ##################################
-!definelong LAYOUT_AS_SKETCH
+!definelong FOR_DISCUSSION
     skinparam backgroundColor white
     skinparam handwritten true
-    skinparam defaultFontName "Comic Sans MS"
-    center footer <font color=red>Warning:</font> Created for discussion, needs to be validated
+    skinparam defaultFontName "Merienda"
+    center footer For discussion, needs to be validated
 !enddefinelong
 !define LAYOUT_TOP_DOWN top to bottom direction
 !define LAYOUT_LEFT_RIGHT left to right direction
