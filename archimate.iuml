@@ -206,7 +206,8 @@ skinparam RectangleRoundCorner<< <$archimate/application-function> >> 25
 !define Implementation_Gap(e_alias, e_label) archimate $PhysColor "---\n e_label" <<implementation-gap>> as e_alias
 
 'Other Elements
-!define Other_Location(e_alias, e_label) archimate #OrangeRed "e_label" <<location>> as e_alias
+!define Location(e_alias, e_label) archimate #ffbf80 "e_label" <<location>> as e_alias
+!define Location_Grp(e_alias, e_label) rectangle "e_label" as e_alias << <$archimate/location> >> #ffbf80
 !define Junction_Or(e_alias, e_label) circle #whitesmoke "e_label" as e_alias
 !define Junction_And(e_alias, e_label) circle #black "e_label" as e_alias
 !define Grouping(e_alias, e_label) Folder "e_label" <<grouping>> as e_alias
