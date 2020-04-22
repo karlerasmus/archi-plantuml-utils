@@ -5,8 +5,8 @@
 
 ' Styling
 ' ##################################
-!unquoted procedure TECHN_FONT_SIZE 12
-!unquoted procedure ELEMENT_FONT_COLOR #FFFFFF
+!$TECHN_FONT_SIZE = 12
+!$ELEMENT_FONT_COLOR = "#FFFFFF"
 !$BorderColor = "#9E9E9E"
 !$BusColor = "#BUSINESS"
 !$AppColor = "#APPLICATION"
@@ -138,7 +138,7 @@ e_from -[hidden]L- e_to
 rectangle "==e_label" <<boundary>> as e_alias
 !endprocedure
 !unquoted procedure Boundary(e_alias, e_label, e_type)
-rectangle "==e_label\n<size:TECHN_FONT_SIZE>[e_type]</size>" <<boundary>> as e_alias
+rectangle "==e_label\n<size:$TECHN_FONT_SIZE>[e_type]</size>" <<boundary>> as e_alias
 !endprocedure
 
 ' Elements
