@@ -8,7 +8,7 @@
 skinparam LegendBackgroundColor #white
 skinparam LegendBorderThickness 1
 
-!function archiLegend($layers="BATSM",$placement="bottom")
+!unquoted procedure archiLegend($layers="BATSM",$placement="bottom")
 
 !local $not_found = %intval("-1")
 !local $bus = %strpos($layers, "B")
@@ -118,4 +118,4 @@ Specification:[[https://pubs.opengroup.org/architecture/archimate3-doc/]]
 
 end legend
 
-!endfunction
+!endprocedure
